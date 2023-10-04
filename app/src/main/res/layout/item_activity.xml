@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="8dp"
+
+    app:rippleColor="@android:color/darker_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activitiesConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/yetNotCreatedTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/has_not_created"
+            android:textColor="@color/snack_failed_text"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/itemAvatarView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Тренировка еще не добавлена" />
+
+
+        <ImageView
+            android:id="@+id/itemAvatarView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yetNotCreatedTextView"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/itemAvatarView"
+            app:layout_constraintTop_toBottomOf="@id/yetNotCreatedTextView"
+            tools:text="Имя Фамилия" />
+
+
+        <ImageView
+            android:id="@+id/dateTimeImageView"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_date_time"
+            app:layout_constraintBottom_toBottomOf="@+id/dateTimeTextView"
+            app:layout_constraintEnd_toStartOf="@+id/dateTimeTextView"
+            app:layout_constraintStart_toEndOf="@+id/itemAvatarView"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+        <TextView
+            android:id="@+id/dateTimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="#B5B5B5"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dateTimeImageView"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView"
+            tools:text="Дата, время" />
+
+        <TextView
+            android:id="@+id/typeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemAvatarView"
+            tools:text="Run 1" />
+
+        <TextView
+            android:id="@+id/distanceTextView"
+            style="@style/Theme.AppProfile.parameter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/distance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/typeTextView"
+            tools:text="Distance" />
+
+
+        <TextView
+            android:id="@+id/valueDistanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/trackImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/distanceTextView"
+            tools:text="0 km" />
+
+        <View
+            android:id="@+id/div1"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/secondary"
+            app:layout_constraintBottom_toBottomOf="@id/valueDistanceTextView"
+            app:layout_constraintStart_toEndOf="@+id/distanceTextView"
+            app:layout_constraintTop_toTopOf="@id/valueDistanceTextView"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <TextView
+            android:id="@+id/timeTextView"
+            style="@style/Theme.AppProfile.parameter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/time"
+            app:layout_constraintStart_toEndOf="@id/distanceTextView"
+            app:layout_constraintTop_toTopOf="@id/distanceTextView"
+            tools:text="Time" />
+
+        <TextView
+            android:id="@+id/valueTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/trackImage"
+            app:layout_constraintStart_toStartOf="@id/timeTextView"
+            app:layout_constraintTop_toBottomOf="@id/timeTextView"
+            tools:text="0 m" />
+
+
+        <View
+            android:id="@+id/div2"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="52dp"
+            android:background="@color/secondary"
+            app:layout_constraintBottom_toBottomOf="@id/valueTimeTextView"
+            app:layout_constraintStart_toEndOf="@+id/timeTextView"
+            app:layout_constraintTop_toTopOf="@id/valueTimeTextView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/elevationTextView"
+            style="@style/Theme.AppProfile.parameter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="62dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/elevation_gain"
+            app:layout_constraintStart_toEndOf="@id/timeTextView"
+            app:layout_constraintTop_toTopOf="@id/timeTextView"
+            tools:text="Elevation Gain" />
+
+        <TextView
+            android:id="@+id/valueElevationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/trackImage"
+            app:layout_constraintStart_toStartOf="@id/elevationTextView"
+            app:layout_constraintTop_toBottomOf="@id/timeTextView"
+            app:layout_constraintVertical_bias="0.6"
+            tools:text="0 km" />
+
+
+        <ImageView
+            android:id="@+id/trackImage"
+            android:layout_width="0dp"
+            android:layout_height="129dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/track1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/valueDistanceTextView" />
+
+        <TextView
+            android:id="@+id/bestText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="fill_horizontal"
+            android:text="@string/the_best"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/shareImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trackImage" />
+        <View
+            android:id="@+id/div3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/secondary"
+            app:layout_constraintTop_toBottomOf="@id/bestText"
+           app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/shareImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_link"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/div3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

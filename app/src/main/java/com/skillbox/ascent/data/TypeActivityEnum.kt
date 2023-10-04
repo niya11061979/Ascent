@@ -1,0 +1,43 @@
+package com.skillbox.ascent.data
+
+enum class TypeActivityEnum(
+    val lang: Pair<String, String>
+) {
+    STAND_UP_PADDING(Pair("StandUpPaddling", "Гребля на доске стоя")),
+    WEIGHT_TRAINING(Pair("WeightTraining", "Силовая тренировка")),
+    EBIKE_RIDE(Pair("EBikeRide", "Заезд на электровелосипеде")),
+    ELLIPTICAL(Pair("Elliptical", "Эллиптический тренажер")),
+    STAIR_STEPPER(Pair("StairStepper", "Тренажер-степпер")),
+    VIRTUAL_RIDE(Pair("VirtualRide", "Виртуальный заезд")),
+    INLINE_SKATE(Pair("InlineSkate", "Роликовые коньки")),
+    BACK_COUNTRY_SKI(Pair("BackcountrySki", "Бэккантри")),
+    VIRTUAL_RUN(Pair("VirtualRun", "Виртуальный забег")),
+    ROCK_CLIMBING(Pair("RockClimbing", "Скалолазание")),
+    HAND_CYCLE(Pair("Handcycle", "Ручной велосипед")),
+    WHEELCHAIR(Pair("Wheelchair", "Кресло-коляска")),
+    ROLLER_SKI(Pair("RollerSki", "Роликовые лыжи")),
+    WELO_MOBILE(Pair("Velomobile", "Веломобиль")),
+    ALPINE_SKI(Pair("AlpineSki", "Горные лыжи")),
+    SKATEBOARD(Pair("Skateboard", "Скейтборд")),
+    WIND_SURF(Pair("Windsurf", "Виндсерфинг")),
+    KITE_SURF(Pair("Kitesurf", "Кайтсерфинг")),
+    SNOWSHOE(Pair("Snowshoe", "Снегоступы")),
+    SNOWBOARD(Pair("Snowboard", "Сноуборд")),
+    WORKOUT(Pair("Workout", "Тренировка")),
+    CROSSFIT(Pair("Crossfit", "Кроссфит")),
+    NORDIC_SKI(Pair("NordicSki", "Лыжи")),
+    ICE_SKATE(Pair("IceSkate", "Коньки")),
+    KAYAKING(Pair("Kayaking", "Каякинг")),
+    SAIL(Pair("Sail", "Парусный спорт")),
+    SURFING(Pair("Surfing", "Серфинг")),
+    CANOEING(Pair("Canoeing", "Каноэ")),
+    ROWING(Pair("Rowing", "Гребля")),
+    SOCCER(Pair("Soccer", "Футбол")),
+    HIKE(Pair("Hike", "Хайкинг")),
+    SWIM(Pair("Swim", "Заплыв")),
+    WALE(Pair("Walk", "Ходьба")),
+    GOLF(Pair("Golf", "Гольф")),
+    RIDE(Pair("Ride", "Заезд")),
+    YOGA(Pair("Yoga", "Йога")),
+    RUN(Pair("Run", "Забег"))
+}

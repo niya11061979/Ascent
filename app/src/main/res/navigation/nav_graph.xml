@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFragment">
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.skillbox.ascent.ui.onboarding.OnBoardingFragment"
+        android:label="OnboardingFragment"
+        tools:layout="@layout/fragment_onboarding"/>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.skillbox.ascent.ui.auth.AuthFragment"
+        android:label="AuthFragment"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_authFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.skillbox.ascent.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_activityFragment"
+            app:destination="@id/activityFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_alertFragment"
+            app:destination="@id/alertFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.skillbox.ascent.ui.share.ShareFragment"
+        android:label="ShareFragment"
+        tools:layout="@layout/fragment_share">
+        <action
+            android:id="@+id/action_shareFragment_to_alertFragment"
+            app:destination="@id/alertFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityFragment"
+        android:name="com.skillbox.ascent.ui.activities.ActivitiesFragment"
+        android:label="ActivityFragment"
+        tools:layout="@layout/fragment_activities">
+        <argument
+            android:name="avatarUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_activityFragment_to_alertFragment"
+            app:destination="@id/alertFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/createActivityFragment"
+        android:name="com.skillbox.ascent.ui.create_activity.CreateActivityFragment"
+        android:label="CreateActivityFragment"
+        tools:layout="@layout/fragment_create_activity">
+        <argument
+            android:name="timeDistance"
+            app:argType="string"
+            android:defaultValue="not" />
+        <action
+            android:id="@+id/action_createActivityFragment_to_alertFragment"
+            app:destination="@id/alertFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/distanceDialogFragment"
+        android:name="com.skillbox.ascent.ui.custompicker.DistanceDialogFragment"
+        android:label="DistanceDialogFragment"
+        tools:layout="@layout/fragment_distance_picker"/>
+    <fragment
+        android:id="@+id/weightDialogFragment"
+        android:name="com.skillbox.ascent.ui.custompicker.WeightDialogFragment"
+        android:label="WeightDialogFragment"
+        tools:layout="@layout/fragment_weight_picker"/>
+    <fragment
+        android:id="@+id/elapcedDialogFragment"
+        android:name="com.skillbox.ascent.ui.custompicker.ElapcedDialogFragment"
+        android:label="ElapcedDialogFragment"
+        tools:layout="@layout/fragment_elapce_picker"/>
+    <fragment
+        android:id="@+id/smsSendFragment"
+        android:name="com.skillbox.ascent.ui.sms.SmsSendFragment"
+        android:label="SmsSendFragment"
+        tools:layout="@layout/fragment_send_sms">
+        <argument
+            android:name="tel_nember"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/alertFragment"
+        android:name="com.skillbox.ascent.ui.alert.AlertFragment"
+        android:label="AlertFragment"
+        tools:layout="@layout/fragment_alert_set"/>
+</navigation>

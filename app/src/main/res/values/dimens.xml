@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="human_top">149</dimen>
+    <dimen name="human_start">35</dimen>
+</resources>

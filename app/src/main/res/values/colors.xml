@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_light">#887ADE</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="secondary">#E1E1E1</color>
+    <color name="snack_failed_back">#F8E3DD</color>
+    <color name="snack_failed_text">#D84910</color>
+    <color name="auth_status_color">#EF3F09</color>
+    <color name="snack_success_text">#007B40</color>
+    <color name="snack_success_back">#CEEADC</color>
+
+</resources>
