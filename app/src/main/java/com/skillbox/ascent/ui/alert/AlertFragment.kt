@@ -71,9 +71,7 @@ class AlertFragment :
             viewModel.readStateOnOffTimeAlert()  //прочитаем и обновим состояние вью
 
         }, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true).show()
-
-
-    }
+ }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
